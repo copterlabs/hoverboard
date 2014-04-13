@@ -1,0 +1,14 @@
+{
+  "name": "hoverboard",
+  "version": "0.1.0",
+  "dependencies": {
+    "grunt-cli": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest"
+  },
+  "devDependencies": {
+    "grunt-notify": "~0.2.17"
+  }
+}
