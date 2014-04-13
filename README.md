@@ -1,11 +1,10 @@
-RotorWash2
+Hoverboard
 ==========
 
-An updated default WordPress theme used in all Copter Labs projects, featuring 
-Bootstrap, easy admin tools for site creation, and more.
+A WordPress theme for developers, built on Bootstrap.
 
 This is intended to be used as a parent theme. A starter child theme exists; 
-[get it here][rw2-child-starter].
+[get it here][hoverboard-child-starter].
 
 
 Documentation
@@ -27,9 +26,9 @@ If the problem is something you can fix, fix it and submit a pull request.
 Changelog
 ---------
 
-### 1.0.0
+### 0.1.0
 
-* Initial release
+* Initial beta release
 
 
 Versioning
@@ -72,8 +71,30 @@ Authors
 Copyright and License
 ---------------------
 
-Copyright 2013 Copter Labs, Inc.
+Copyright 2014 Copter Labs, Inc.
 
-[rw2-child-starter]: https://github.com/copterlabs/bootpress-child
-[wiki]: https://github.com/copterlabs/bootpress/wiki
-[issues]: https://github.com/copterlabs/bootpress/issues
+The MIT License (MIT)
+
+Copyright (c) 2014 Copter Labs, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+[hoverboard-child-starter]: https://github.com/copterlabs/hoverboard-child
+[wiki]: https://github.com/copterlabs/hoverboard/wiki
+[issues]: https://github.com/copterlabs/hoverboard/issues
