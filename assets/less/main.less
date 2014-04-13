@@ -1,0 +1,153 @@
+/*! Hoverboard v0.1.0 | MIT License | github.com/copterlabs/hoverboard */
+
+
+/*
+ * DEPENDENCIES
+ *****************************************************************************/
+
+@import "variables.less";
+@import "hoverstrap.less";
+
+
+/*
+ * BASIC LAYOUT
+ *****************************************************************************/
+
+body {
+    font-size:   @font-size-base;
+    line-height: @line-height-computed;
+}
+
+article,aside {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container {
+    margin-top: @line-height-computed;
+    margin-bottom: @line-height-computed*2;
+}
+
+img {
+    .img-responsive();
+}
+
+
+/*
+ * HEADER
+ *****************************************************************************/
+
+header {
+    padding: @line-height-computed*.5;
+
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+nav {
+    margin: 0 auto;
+
+    &.navbar-default {
+        margin: 0;
+        background: transparent;
+        border: 0;
+    }
+}
+
+#site-credits {
+    margin-top: @line-height-computed;
+    margin-bottom: @line-height-computed;
+
+    p {
+        margin: 0;
+        font-size: @font-size-base*.875;
+
+        a {
+            color: inherit;
+        }
+    }
+}
+
+.more-link {
+    font-size: @font-size-base*.7;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+
+/*
+ * COMMENTS
+ *****************************************************************************/
+
+#post-comments {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &>li {
+        list-style: none;
+        margin: @line-height-computed*1.5 0;
+
+        ul.children {
+            list-style: none;
+            margin: @line-height-computed*.5 0 0 @line-height-computed;
+
+            &>li {
+                list-style: none;
+                margin: @line-height-computed 0;
+                padding: @line-height-computed*.5 @line-height-computed;
+                border-left: 1px dotted @gray-dark;
+            }
+        }
+    }
+
+    .comment-body {
+        .comment-author,.comment-meta {
+            overflow: hidden;
+            float: left;
+            height: 32px;
+            margin: 0 0 .25em;
+            padding: 0 0 .25em;
+            font-size: .75em;
+            line-height: 1.33em;
+
+            &>* {
+                vertical-align: middle;
+            }
+
+            &>a,&>cite,&>span {
+                display: inline-block;
+                margin: .625em 0 0 1em;
+                text-transform: uppercase;
+            }
+        }
+
+        .comment-author>cite,.comment-author>span,&>p {
+            clear: left;
+            margin: 0 0 .5em;
+
+            &.says { display: none; }
+        }
+    }
+
+    &>li.bypostauthor,ul.children>li.bypostauthor {
+        background: @gray-light;
+        border-left: @line-height-computed*.5 solid @gray-dark;
+    }
+}
+
+#commentform {
+    label,input,textarea {
+        display: block;
+    }
+
+    label {
+        font-size: .75em;
+        line-height: 1.33em;
+        text-transform: uppercase;
+    }
+
+    .form-allowed-tags { display: none; }
+}

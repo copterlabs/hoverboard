@@ -1,0 +1,67 @@
+/*
+ * Additional mixins used by Hoverboard
+ */
+
+// Adds a box-sizing shortcut
+.box-sizing(@sizing: border-box) {
+    -webkit-box-sizing: @sizing;
+       -moz-box-sizing: @sizing;
+            box-sizing: @sizing;
+}
+
+// Quick placeholder color for form inputs
+.placeholder(@placeholder-color: #666; @placeholder-style: italic ) {
+    ::-webkit-input-placeholder {
+        color: @placeholder-color;
+        font-style: @placeholder-style;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        color: @placeholder-color;
+        font-style: @placeholder-style;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: @placeholder-color;
+        font-style: @placeholder-style;
+    }
+
+    :-ms-input-placeholder {  
+        color: @placeholder-color;
+        font-style: @placeholder-style;
+    }
+}
+
+// Quickly change the size of headings at set breakpoint
+.responsive-headings(@breakpoint; @size-percentage) {
+    h1 { 
+        @media(@breakpoint) { 
+            font-size: @font-size-h1*(@size-percentage/100)
+        }
+    }
+    h2 { 
+        @media(@breakpoint) { 
+            font-size: @font-size-h2*(@size-percentage/100)
+        }
+    }
+    h3 { 
+        @media(@breakpoint) { 
+            font-size: @font-size-h3*(@size-percentage/100)
+        }
+    }
+    h4 { 
+        @media(@breakpoint) { 
+            font-size: @font-size-h4*(@size-percentage/100)
+        }
+    }
+    h5 { 
+        @media(@breakpoint) { 
+            font-size: @font-size-h5*(@size-percentage/100)
+        }
+    }
+    h6 { 
+        @media(@breakpoint) { 
+            font-size: @font-size-h6*(@size-percentage/100)
+        }
+    }
+}

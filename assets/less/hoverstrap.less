@@ -1,0 +1,89 @@
+/**
+ * Overrides the default Bootstrap loader with Hoverboard-specific values
+ */
+
+// Sets the path to the Bootstrap core
+@bootstrap-core-path: '../../bower_components/bootstrap/less/';
+
+// Overwrites the default font path
+@icon-font-path:      '../../bower_components/bootstrap/fonts/';
+
+// Mixins
+@import "mixins.less";
+@import "@{bootstrap-core-path}mixins.less";
+
+// Reset
+@import "@{bootstrap-core-path}normalize.less";
+@import "@{bootstrap-core-path}print.less";
+
+// Core CSS
+@import "@{bootstrap-core-path}scaffolding.less";
+@import "@{bootstrap-core-path}type.less";
+@import "@{bootstrap-core-path}code.less";
+@import "@{bootstrap-core-path}grid.less";
+@import "@{bootstrap-core-path}tables.less";
+@import "@{bootstrap-core-path}forms.less";
+@import "@{bootstrap-core-path}buttons.less";
+
+// Components
+@import "@{bootstrap-core-path}component-animations.less";
+@import "@{bootstrap-core-path}glyphicons.less";
+@import "@{bootstrap-core-path}dropdowns.less";
+@import "@{bootstrap-core-path}button-groups.less";
+@import "@{bootstrap-core-path}input-groups.less";
+@import "@{bootstrap-core-path}navs.less";
+@import "@{bootstrap-core-path}navbar.less";
+@import "@{bootstrap-core-path}breadcrumbs.less";
+@import "@{bootstrap-core-path}pagination.less";
+@import "@{bootstrap-core-path}pager.less";
+@import "@{bootstrap-core-path}labels.less";
+@import "@{bootstrap-core-path}badges.less";
+@import "@{bootstrap-core-path}jumbotron.less";
+@import "@{bootstrap-core-path}thumbnails.less";
+@import "@{bootstrap-core-path}alerts.less";
+@import "@{bootstrap-core-path}progress-bars.less";
+@import "@{bootstrap-core-path}media.less";
+@import "@{bootstrap-core-path}list-group.less";
+@import "@{bootstrap-core-path}panels.less";
+@import "@{bootstrap-core-path}wells.less";
+@import "@{bootstrap-core-path}close.less";
+
+// Components w/ JavaScript
+@import "@{bootstrap-core-path}modals.less";
+@import "@{bootstrap-core-path}tooltip.less";
+@import "@{bootstrap-core-path}popovers.less";
+@import "@{bootstrap-core-path}carousel.less";
+
+// Utility classes
+@import "@{bootstrap-core-path}utilities.less";
+@import "@{bootstrap-core-path}responsive-utilities.less";
+
+// Default WordPress classes
+@import "wp-classes.less";
+
+
+/*
+ * SCREEN SIZE DETECTION FOR JS VIA CSS
+ * More info on how this works: http://adactio.com/journal/5429/
+ *****************************************************************************/
+body {
+    &:after {
+        content: 'desktop';
+        visibility: hidden;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 0px;
+        z-index: -1;
+        pointer-events: none;
+
+        @media (max-width: @screen-sm-max) {
+            content: 'tablet';
+        }
+
+        @media (max-width: 600px) {
+            content: 'mobile';
+        }
+    }
+}
