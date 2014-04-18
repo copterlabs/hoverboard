@@ -64,7 +64,8 @@ class Hoverboard
         if (!class_exists('acf')) {
             // Prevents ACF dashboard options from displaying for non-developers
             if (!current_user_can('manage_hoverboard') && !defined('ACF_LITE')) {
-                define('ACF_LITE', TRUE);
+                // TODO Fix the user permissions so we can control this
+                // define('ACF_LITE', TRUE);
             }
 
             require_once TEMPLATEPATH . '/vendor/advanced-custom-fields/acf-core/acf.php';
@@ -727,6 +728,8 @@ class Hoverboard
             ) {
                 $slug = 'blog';
             }
+        } else if (is_front_page()) {
+            $slug = 'home';
         }
 
         return $slug;
@@ -758,7 +761,6 @@ $hoverboard = new Hoverboard;
  * In an attempt to make this code easier to read, the major chunks have been 
  * broken into smaller files with code pertaining only that functionality.
  */
-// require_once TEMPLATEPATH . '/includes/filters.php';
 // require_once TEMPLATEPATH . '/includes/extra.php';
 // require_once TEMPLATEPATH . '/includes/shortcodes.php';
 // require_once TEMPLATEPATH . '/includes/social.php';
