@@ -1,11 +1,10 @@
 Hoverboard
-==========
+=============================================
 
 A WordPress theme for developers, built on Bootstrap.
 
 This is intended to be used as a parent theme. A starter child theme exists; 
 [get it here][hoverboard-child-starter].
-
 
 Documentation
 -------------
@@ -66,6 +65,14 @@ Authors
 
 + [http://twitter.com/freekrai](http://twitter.com/freekrai)
 + [http://github.com/freekrai](http://github.com/freekrai)
+
+
+Attributions
+------------
+
+
+![Hoverboard](http://i.imgur.com/EYTa2aL.png)
+Special thanks to [Everaldo Coelho](http://www.everaldo.com/) for letting us use this sweet icon.
 
 
 Copyright and License
