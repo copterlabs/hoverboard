@@ -47,17 +47,17 @@ td.alignright{
 }
 
 .aligncenter {
-    .aligncenter !important;
+    .floatcenter !important;
 }
 
-.aligncenter(@margin: @line-height-computed) {
+.floatcenter(@margin: @line-height-computed) {
     display: block;
     float: none;
     margin: 0 auto @margin;
 }
 
 .floatright(@margin: @line-height-computed) {
-    .aligncenter;
+    .floatcenter;
 
     @media (min-width: @screen-md-min) {
         float: right;
@@ -67,7 +67,7 @@ td.alignright{
 }
 
 .floatleft(@margin: @line-height-computed) {
-    .aligncenter;
+    .floatcenter;
 
     @media (min-width: @screen-md-min) {
         float: left;
