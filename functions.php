@@ -752,6 +752,95 @@ class Hoverboard
             'loader' => new Mustache_Loader_FilesystemLoader($views_path),
         ));
     }
+
+
+
+    /**
+     * Include a default menu with the theme
+     * @return string The slug to be used as a body class
+     * @since  0.1.0
+     *
+     * Example configuration:
+     *    
+     * $menu_config = [
+     *     'menu_name'     => 'Main Menu',
+     *     'menu_location' => 'primary',
+     *     'menu_items'    => [
+     *         [ 
+     *             'title' => 'About',
+     *             'url'   => '/about/',
+     *             'class' => 'about'
+     *         ],
+     *         [ 
+     *             'title' => 'Health',
+     *             'url'   => '/health/',
+     *             'class' => 'health'
+     *         ],
+     *         [ 
+     *             'title' => 'Fitness &amp; Nutrition',
+     *             'url'   => '/fitness-nutrition/',
+     *             'class' => 'fitness-nutrition'
+     *         ],
+     *         [ 
+     *             'title' => 'Blog',
+     *             'url'   => '/blog/',
+     *             'class' => 'blog'
+     *         ],
+     *         [ 
+     *             'title' => 'Contact',
+     *             'url'   => '/contact/',
+     *             'class' => 'contact'
+     *         ],
+     *         [ 
+     *             'title' => 'Facebook',
+     *             'url'   => '#',
+     *             'class' => 'fa fa-facebook'
+     *         ],
+     *         [ 
+     *             'title' => 'Twitter',
+     *             'url'   => '#',
+     *             'class' => 'fa fa-twitter'
+     *         ],
+     *         [ 
+     *             'title' => 'Instagram',
+     *             'url'   => '#',
+     *             'class' => 'fa fa-instagram'
+     *         ],
+     *         [ 
+     *             'title' => 'YouTube',
+     *             'url'   => '#',
+     *             'class' => 'fa fa-youtube'
+     *         ]
+     *     ]
+     * ];
+     */
+    static function generate_default_menu( $menu_config ) {
+        global $wp_query;
+
+        // Does the menu exist already?
+        if( !wp_get_nav_menu_object( $menu_config['menu_name'] )){
+            
+            // If it doesn't exist, let's create it.
+            $menu_id = wp_create_nav_menu($menu_config['menu_name']);
+
+            // Set up default links and add them to the menu.
+            foreach ($menu_config['menu_items'] as $item) {
+                wp_update_nav_menu_item($menu_id, 0, array(
+                    'menu-item-title' =>  __($item['title']),
+                    'menu-item-classes' => $item['class'],
+                    'menu-item-url' => home_url( $item['url'] ), 
+                    'menu-item-status' => 'publish'));
+            }
+
+            // Grab the theme locations and assign our newly-created menu
+            // to the primary menu location.
+            if( !has_nav_menu( $menu_config['menu_location'] ) ){
+                $locations = get_theme_mod('nav_menu_locations');
+                $locations[$menu_config['menu_location']] = $menu_id;
+                set_theme_mod( 'nav_menu_locations', $locations );
+            }
+        }
+    }
 }
 
 // Actually starts the party
