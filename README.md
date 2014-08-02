@@ -25,6 +25,10 @@ If the problem is something you can fix, fix it and submit a pull request.
 Changelog
 ---------
 
+### 0.1.1
+
+* Added a Bower config
+
 ### 0.1.0
 
 * Initial beta release
