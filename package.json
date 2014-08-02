@@ -1,14 +1,24 @@
 {
   "name": "hoverboard",
   "version": "0.1.0",
+  "author": "Copter Labs <info@copterlabs.com> (http://copterlabs.com)",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/copterlabs/hoverboard"
+  },
   "dependencies": {
     "grunt-cli": "latest",
+    "bower": "~1.3.8"
+  },
+  "devDependencies": {
+    "grunt-notify": "~0.2.17",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-watch": "latest"
-  },
-  "devDependencies": {
-    "grunt-notify": "~0.2.17"
   }
 }
