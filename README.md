@@ -25,6 +25,10 @@ If the problem is something you can fix, fix it and submit a pull request.
 Changelog
 ---------
 
+### 0.1.2
+
+* Fixed a notice when dealing with post pagination
+
 ### 0.1.1
 
 * Added a Bower config
