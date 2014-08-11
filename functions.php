@@ -535,7 +535,7 @@ class Hoverboard
      * @param  bool   $return Flag to set if the markup should echo or be returned
      * @return mixed          The markup if $return is TRUE, else void
      */
-    public function pagination( $text_align='center', $range=4, $pages=NULL, $prev=NULL, $next=NULL, $return=TRUE ) { 
+    static function pagination( $text_align='center', $range=4, $pages=NULL, $prev=NULL, $next=NULL, $return=TRUE ) { 
         if (empty($prev)) {
             $prev = '&lsaquo;';
         }
