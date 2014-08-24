@@ -731,13 +731,3 @@ class Hoverboard
 
 // Actually starts the party
 $hoverboard = new Hoverboard;
-
-/* 
- * In an attempt to make this code easier to read, the major chunks have been 
- * broken into smaller files with code pertaining only that functionality.
- */
-// require_once TEMPLATEPATH . '/includes/extra.php';
-// require_once TEMPLATEPATH . '/includes/shortcodes.php';
-// require_once TEMPLATEPATH . '/includes/social.php';
-// require_once TEMPLATEPATH . '/includes/comments.php';
-// require_once TEMPLATEPATH . '/includes/admin.php';
