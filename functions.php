@@ -60,23 +60,11 @@ class Hoverboard
         $bower_path = TEMPLATEPATH . '/bower_components';
         require_once $bower_path . '/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php';
 
-        // Loads Advanced Custom Fields if the plugin is not already installed
-        if (!class_exists('acf')) {
-            // Prevents ACF dashboard options from displaying for non-developers
-            if (!current_user_can('manage_hoverboard') && !defined('ACF_LITE')) {
-                // TODO Fix the user permissions so we can control this
-                // define('ACF_LITE', TRUE);
-            }
-
-            require_once TEMPLATEPATH . '/vendor/advanced-custom-fields/acf-core/acf.php';
-        }
-
         // See http://codex.wordpress.org/Plugin_API/Action_Reference
         add_action('wp_head',               array($this, 'header'));
         add_action('widgets_init',          array($this, 'widgets'));
         add_action('wp_footer',             array($this, 'footer'));
         add_action('admin_head',            array($this, 'admin_head'));
-        add_action('acf/register_fields',   array($this, 'load_acf'));
         add_action('wp_enqueue_scripts',    array($this, 'enqueue_assets'));
 
         // See http://codex.wordpress.org/Plugin_API/Filter_Reference
@@ -144,19 +132,6 @@ class Hoverboard
      */
     public function admin_head(  ) {
         do_action('hoverboard/admin_head');
-    }
-
-    /**
-     * Loads ACF specialty fields for use in the theme
-     * @return void
-     * @since  0.1.0
-     * @see    http://www.advancedcustomfields.com/add-ons/
-     */
-    public function load_acf(  ) {
-        $acf_path = TEMPLATEPATH . '/vendor/advanced-custom-fields';
-        require_once $acf_path . '/acf-flexible-content/acf-flexible-content.php';
-        require_once $acf_path . '/acf-options-page/acf-options-page.php';
-        require_once $acf_path . '/acf-repeater/acf-repeater.php';
     }
 
     /*
