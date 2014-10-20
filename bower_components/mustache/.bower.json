@@ -1,0 +1,14 @@
+{
+  "name": "mustache",
+  "homepage": "https://github.com/bobthecow/mustache.php",
+  "version": "2.7.0",
+  "_release": "2.7.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.7.0",
+    "commit": "4e1d62f02e0da7b6ad741c95b929342cf810d6ad"
+  },
+  "_source": "git://github.com/bobthecow/mustache.php.git",
+  "_target": "*",
+  "_originalSource": "bobthecow/mustache.php"
+}
