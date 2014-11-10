@@ -25,6 +25,10 @@ If the problem is something you can fix, fix it and submit a pull request.
 Changelog
 ---------
 
+### 0.2.1
+
+* Removed default WordPress styling to avoid `!important` hacks
+
 ### 0.2.0
 
 * Removed Advanced Custom Fields as a bundled dependency
