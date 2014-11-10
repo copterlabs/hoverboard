@@ -1,6 +1,6 @@
 {
   "name": "hoverboard",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/copterlabs/hoverboard",
   "authors": [
     "jlengstorf <jason@copterlabs.com>",
@@ -25,7 +25,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "3.1.1",
+    "bootstrap": "latest",
     "wp-bootstrap-navwalker": "twittem/wp-bootstrap-navwalker",
     "mustache": "bobthecow/mustache.php"
   }

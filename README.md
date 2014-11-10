@@ -25,9 +25,13 @@ If the problem is something you can fix, fix it and submit a pull request.
 Changelog
 ---------
 
-### 0.2.1
+### 0.2.2
 
 * Removed default WordPress styling to avoid `!important` hacks
+
+### 0.2.1
+
+* Set Bootstrap to always load the latest version
 
 ### 0.2.0
 
