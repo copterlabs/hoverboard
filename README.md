@@ -25,6 +25,11 @@ If the problem is something you can fix, fix it and submit a pull request.
 Changelog
 ---------
 
+### 0.2.3
+
+* Moved wp-bootstrap-navwalker to a fork at https://github.com/thedotmack/wp-bootstrap-navwalker 
+  * There was an issue with the optional wp nav title attribute being used as some sort of hacky hookup for glyphicons, that conflicted with expected nav functionality. Fixed it for our purposes, however removing the glyphicon compatibility that we don't use often enough to keep. Can be fixed at a later date.
+
 ### 0.2.2
 
 * Removed default WordPress styling to avoid `!important` hacks
