@@ -26,7 +26,7 @@
   ],
   "dependencies": {
     "bootstrap": "latest",
-    "wp-bootstrap-navwalker": "twittem/wp-bootstrap-navwalker",
-    "mustache": "bobthecow/mustache.php"
+    "mustache": "bobthecow/mustache.php",
+    "wp-bootstrap-navwalker": "git@github.com:thedotmack/wp-bootstrap-navwalker.git#master"
   }
 }
