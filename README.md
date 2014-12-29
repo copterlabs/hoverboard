@@ -25,6 +25,10 @@ If the problem is something you can fix, fix it and submit a pull request.
 Changelog
 ---------
 
+### 0.2.4
+
+* Changed "Create your menu." link.
+
 ### 0.2.3
 
 * Moved wp-bootstrap-navwalker to a fork at https://github.com/thedotmack/wp-bootstrap-navwalker 
